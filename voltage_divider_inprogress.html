@@ -272,15 +272,13 @@ td.paramLabel {
   </tr>
   <tr>
     <td id="ratioTypeLabel" class="labelCol">Ratio Type</td>
-    <td class="buttonCol">
-      <radiogroup aria-labelledby="ratioTypeLabel">
-        <input type="radio" name="ratioType" id="ratioTypeMin"/>
-        <label for="ratioTypeMin" class="buttonLabel">MIN</label> &#x2002;
-        <input type="radio" name="ratioType" id="ratioTypeNom" checked/>
-        <label for="ratioTypeNom" class="buttonLabel">NOM</label> &#x2002;
-        <input type="radio" name="ratioType" id="ratioTypeMax"/>
-        <label for="ratioTypeMax" class="buttonLabel">MAX</label>
-      </radiogroup>
+    <td class="buttonCol" role="radiogroup" aria-labelledby="ratioTypeLabel">
+      <input type="radio" name="ratioType" id="ratioTypeMin"/>
+      <label for="ratioTypeMin" class="buttonLabel">MIN</label> &#x2002;
+      <input type="radio" name="ratioType" id="ratioTypeNom" checked/>
+      <label for="ratioTypeNom" class="buttonLabel">NOM</label> &#x2002;
+      <input type="radio" name="ratioType" id="ratioTypeMax"/>
+      <label for="ratioTypeMax" class="buttonLabel">MAX</label>
     </td>
     <td>Over Tolerance</td>
   </tr>
@@ -301,15 +299,13 @@ td.paramLabel {
   </tr>
   <tr>
     <td id="seriesLabel" class="labelCol">Resistor Value Series</td>
-    <td class="buttonCol">
-      <radiogroup aria-labelledby="seriesLabel">
-        <input type="radio" name="resSeries" id="resSeriesE24"/>
-        <label for="resSeriesE24" class="buttonLabel">E24</label> &#x2002;
-        <input type="radio" name="resSeries" id="resSeriesE96"/>
-        <label for="resSeriesE96" class="buttonLabel">E96</label> &#x2002;
-        <input type="radio" name="resSeries" id="resSeriesE24E96" checked/>
-        <label for="resSeriesE24E96" class="buttonLabel">BOTH</label>
-      </radiogroup>
+    <td class="buttonCol" role="radiogroup" aria-labelledby="seriesLabel">
+      <input type="radio" name="resSeries" id="resSeriesE24"/>
+      <label for="resSeriesE24" class="buttonLabel">E24</label> &#x2002;
+      <input type="radio" name="resSeries" id="resSeriesE96"/>
+      <label for="resSeriesE96" class="buttonLabel">E96</label> &#x2002;
+      <input type="radio" name="resSeries" id="resSeriesE24E96" checked/>
+      <label for="resSeriesE24E96" class="buttonLabel">BOTH</label>
     </td>
     <td>View&#x2002;<a href="javascript:;" onclick="voltDiv.displayResistorValues('E24');">E24</a>,&#x2002;<a href="javascript:;" onclick="voltDiv.displayResistorValues('E96');">E96</a></td>
   </tr>
