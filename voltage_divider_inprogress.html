@@ -173,6 +173,7 @@ a:active {
   margin-left: 4pt;
   margin-top: 16pt;
   margin-bottom: 10pt;
+  font-weight: normal;
 }
 
 span.titleSpan {
@@ -315,9 +316,9 @@ td.paramLabel {
 </table></form>
 
 <section aria-labelledby="eqsTitleSpan">
-<div class="titleDiv" id="eqsTitle" style="margin-bottom: 0px" role="heading">
+<h2 class="titleDiv" id="eqsTitle" style="margin-bottom: 0px">
   <span id="eqsTitleSpan" class="titleSpan">Equations</span><span style="font-size: 14pt; margin-left: 1em;">(&#x2009;<a href="javascript:;" id="toggleMath" onclick="voltDiv.toggleMath();">show</a>&#x2009;)</span>
-</div>
+</h2>
 <div id="eqsDiv" style="display: none;">
   <div style="float:left; margin-right: 14pt;">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 221.41 360.341" height="240.228" width="147.606" role="img" aria-label="Voltage Divider Circuit Diagram">
@@ -334,7 +335,7 @@ td.paramLabel {
         </g>
       </svg>
   </div>
-  <div style="display: inline-block; font-size: 12pt;">
+  <div style="display: inline-block; font-size: 12pt;" aria-label="voltage divider equations">
     <div style="margin-bottom: 14pt;"><b>String Resistance</b>&#x2002;=&#x2002;Lower + Upper</div>
     <div style="margin-bottom: 14pt;"><b>Divider Ratio</b>&#x2002;=&#x2002;Vo <b>/</b> Vi</div>
     <div style="margin-bottom: 14pt;"><b>Nom Ratio</b>&#x2002;=&#x2002;Lower <b>/</b> (Lower + Upper)</div>
@@ -349,9 +350,9 @@ td.paramLabel {
 </section>
 
 <main aria-labelledby="outTitleSpan">
-<div class="titleDiv" id="outTitleDiv" style="display: none;">
+<h2 class="titleDiv" id="outTitleDiv" style="display: none;">
   <span class="titleSpan" id="outTitleSpan" style="margin-right: 0.2em"></span><span id="downloadSpan" style="margin-left: 1em; font-size: 14pt; display: none;">(&#x2009;<a href="javascript:;" onclick="voltDiv.download_xlsx();">Download .xlsx</a>&#x2009;)&#x2003;(&#x2009;<a href="javascript:;" onclick="voltDiv.download_csv();">Download .csv</a>&#x2009;)</span><span id="clearSpan" style="margin-left: 1em; font-size: 14pt; display: none;">(&#x2009;<a href="javascript:;" onclick="voltDiv.clearResults();">clear</a>&#x2009;)</span><span id="ratioSpan" style="margin-left: 1em; font-size: 13pt;"></span>
-</div>
+</h2>
 <table id="resultsTable" style="font-size: 12pt; display: none;"></table>
 </main>
 
