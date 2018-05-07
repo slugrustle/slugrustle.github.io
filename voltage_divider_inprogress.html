@@ -264,21 +264,23 @@ td.paramLabel {
 
 <body>
 <header role="banner" class="titleDiv"><span class="titleSpan">Voltage Divider Calculator&#x2003;v1.11&#x2003;2018-05-02</span></header>
-<form role="form"><table id="inputTable">
+<form role="form" action="javascript:void(0)" aria-label="calculator input"><table id="inputTable">
   <tr>
     <td class="labelCol"><label for="dividerRatio">Target Divider Ratio</label></td>
     <td class="buttonCol"><input id="dividerRatio" maxlength="200" autofocus/></td>
     <td>&gt;0 and &lt;1</td>
   </tr>
   <tr>
-    <td class="labelCol">Ratio Type</td>
+    <td id="ratioTypeLabel" class="labelCol">Ratio Type</td>
     <td class="buttonCol">
-      <input type="radio" name="ratioType" id="ratioTypeMin"/>
-      <label for="ratioTypeMin" class="buttonLabel">MIN</label> &#x2002;
-      <input type="radio" name="ratioType" id="ratioTypeNom" checked/>
-      <label for="ratioTypeNom" class="buttonLabel">NOM</label> &#x2002;
-      <input type="radio" name="ratioType" id="ratioTypeMax"/>
-      <label for="ratioTypeMax" class="buttonLabel">MAX</label>
+      <radiogroup aria-labelledby="ratioTypeLabel">
+        <input type="radio" name="ratioType" id="ratioTypeMin"/>
+        <label for="ratioTypeMin" class="buttonLabel">MIN</label> &#x2002;
+        <input type="radio" name="ratioType" id="ratioTypeNom" checked/>
+        <label for="ratioTypeNom" class="buttonLabel">NOM</label> &#x2002;
+        <input type="radio" name="ratioType" id="ratioTypeMax"/>
+        <label for="ratioTypeMax" class="buttonLabel">MAX</label>
+      </radiogroup>
     </td>
     <td>Over Tolerance</td>
   </tr>
@@ -298,14 +300,16 @@ td.paramLabel {
     <td>&#x03A9;</td>
   </tr>
   <tr>
-    <td class="labelCol">Resistor Value Series</td>
+    <td id="seriesLabel" class="labelCol">Resistor Value Series</td>
     <td class="buttonCol">
+      <radiogroup aria-labelledby="seriesLabel">
         <input type="radio" name="resSeries" id="resSeriesE24"/>
         <label for="resSeriesE24" class="buttonLabel">E24</label> &#x2002;
         <input type="radio" name="resSeries" id="resSeriesE96"/>
         <label for="resSeriesE96" class="buttonLabel">E96</label> &#x2002;
         <input type="radio" name="resSeries" id="resSeriesE24E96" checked/>
         <label for="resSeriesE24E96" class="buttonLabel">BOTH</label>
+      </radiogroup>
     </td>
     <td>View&#x2002;<a href="javascript:;" onclick="voltDiv.displayResistorValues('E24');">E24</a>,&#x2002;<a href="javascript:;" onclick="voltDiv.displayResistorValues('E96');">E96</a></td>
   </tr>
@@ -348,17 +352,19 @@ td.paramLabel {
 </div>
 </section>
 
-<main role="main">
+<main role="main" aria-labelledby="outTitleSpan">
 <div class="titleDiv" id="outTitleDiv" style="display: none;">
   <span class="titleSpan" id="outTitleSpan" style="margin-right: 0.2em"></span><span id="downloadSpan" style="margin-left: 1em; font-size: 14pt; display: none;">(&#x2009;<a href="javascript:;" onclick="voltDiv.download_xlsx();">Download .xlsx</a>&#x2009;)&#x2003;(&#x2009;<a href="javascript:;" onclick="voltDiv.download_csv();">Download .csv</a>&#x2009;)</span><span id="clearSpan" style="margin-left: 1em; font-size: 14pt; display: none;">(&#x2009;<a href="javascript:;" onclick="voltDiv.clearResults();">clear</a>&#x2009;)</span><span id="ratioSpan" style="margin-left: 1em; font-size: 13pt;"></span>
 </div>
 <table id="resultsTable" style="font-size: 12pt; display: none;"></table>
 </main>
 
+<section aria-labelledby="errorTitleSpan">
 <div class="titleDiv" id="errorTitleDiv" style="display: none;">
   <span class="titleSpan" id="errorTitleSpan">Input Error</span>
 </div>
 <div id="errorDiv" style="max-width: 30em; border: 1px solid black; padding: 8pt; display: none;"></div>
+</section>
 
 <footer role="contentinfo" style="margin-top: 50pt; margin-left: 4pt;" id="licenseBlock">
   <div style="float: left; margin-right: 1em;">
@@ -374,8 +380,7 @@ td.paramLabel {
     </a>
   </div>
   <div style="max-width: 29em; display: inline-block; font-size: 11pt;">
-    To the extent possible under law, Ben Tesch has waived all copyright and related or neighboring rights to
-    Voltage Divider Calculator. This work is published from: United States.
+    To the extent possible under law, Ben Tesch has waived all copyright and related or neighboring rights to Voltage Divider Calculator. This work is published from: United States.
   </div>
 </footer>
 
